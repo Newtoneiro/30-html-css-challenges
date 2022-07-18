@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <title>Login form</title>
+  </head>
+  <body>
+    <div class="main">
+      <div id="sign" class="slide">
+        <div class="circle1 circle"></div>
+        <div class="circle2 circle"></div>
+        <h1>Welcome back!</h1>
+        <p>Welcome back, sign in using the button below!.</p>
+        <button id="switch_button1">Sign in</button>
+      </div>
+      <div id="register" class="slide">
+        <div class="circle1 circle"></div>
+        <div class="circle2 circle"></div>
+        <h1>Sign up!</h1>
+        <p>
+          Sign up to have full access to the app! Can't wait to be working with
+          you.
+        </p>
+        <button id="switch_button2">Register</button>
+      </div>
+      <form id="signform" class="form">
+        <h1>Create account</h1>
+        <div class="social">
+            <img class="icon" src="svg/fb.svg" alt="" />
+            <img class="icon" src="svg/linkedin.svg" />
+            <img class="icon" src="svg/twitter.svg" />
+        </div>
+        <p>or use email</p>
+        <div class="inputs">
+            <input type="text" placeholder="username"></input>
+            <input type="email" placeholder="email"></input>
+            <input type="password" placeholder="password"></input>
+        </div>
+        <button type="submit">Sign up</button>
+      </form>
+      <form id="registerform" class="form">
+        <h1>Sign in to website</h1>
+        <div class="social">
+            <img class="icon" src="svg/fb.svg" alt="" />
+            <img class="icon" src="svg/linkedin.svg" />
+            <img class="icon" src="svg/twitter.svg" />
+        </div>
+        <p>or use email</p>
+        <div class="inputs">
+            <input type="email" placeholder="email"></input>
+            <input type="password" placeholder="password"></input>
+        </div>
+        <button type="submit">Sign in</button>
+      </form>
+    </div>
+    <script>
+      let button1 = document.getElementById("switch_button1");
+      let button2 = document.getElementById("switch_button2");
+      button1.addEventListener("click", () => {
+        document.getElementById("register").style.display = "flex";
+        document.getElementById("registerform").style.display = "flex";
+        document.getElementById("signform").style.display = "none";
+        document.getElementById("sign").style.display = "none";
+      });
+      button2.addEventListener("click", () => {
+        document.getElementById("register").style.display = "none";
+        document.getElementById("registerform").style.display = "none";
+        document.getElementById("signform").style.display = "flex";
+        document.getElementById("sign").style.display = "flex";
+      });
+    </script>
+  </body>
+</html>

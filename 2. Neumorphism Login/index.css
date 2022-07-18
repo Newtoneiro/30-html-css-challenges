@@ -1,0 +1,298 @@
+body {
+  background-color: rgb(243, 243, 243);
+  font-family: "Montserraf", sans-serif;
+  width: 100%;
+  height: 100%;
+}
+
+.main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  height: 70%;
+  border-radius: 6px;
+  box-shadow: -7px -7px 10px white, 7px 7px 10px rgba(0, 0, 0, 0.3);
+}
+
+.slide {
+  overflow: hidden;
+  position: absolute;
+  width: 40%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+  padding: 20px;
+  letter-spacing: 2px;
+
+  background-color: rgb(243, 243, 243);
+  box-shadow: -5px -5px 10px white, 5px 5px 10px rgba(0, 0, 0, 0.3);
+
+  z-index: 200;
+}
+
+.slide h1 {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 3;
+  margin: 0;
+}
+
+.slide p {
+  text-align: justify;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.slide button,
+.form button {
+  margin-top: 10px;
+  width: 150px;
+  height: 40px;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+
+  background-color: rgb(74, 138, 241);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+
+  text-transform: uppercase;
+  color: white;
+  font-weight: 500;
+  letter-spacing: 2px;
+
+  cursor: pointer;
+
+  transition: 0.5s;
+}
+
+.slide button:hover,
+.form button:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3), 0 0 50px rgba(0, 0, 0, 0.3),
+    0 0 100px rgba(0, 0, 0, 0.3);
+  letter-spacing: 3px;
+  transition: 0.5s;
+}
+
+.circle {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  box-shadow: inset -5px -5px 10px white, inset 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+#sign .circle1 {
+  top: 0;
+  left: 80%;
+  animation: sign-circle1 2s;
+}
+
+#sign .circle2 {
+  top: 100%;
+  left: 10%;
+  animation: sign-circle2 2s;
+}
+
+#register .circle1 {
+  top: 0;
+  left: 60%;
+  animation: register-circle1 2s;
+}
+
+#register .circle2 {
+  top: 100%;
+  left: 80%;
+  animation: register-circle2 2s;
+}
+
+#register {
+  display: none;
+  right: 0;
+  animation: registerslide 2s;
+}
+
+#sign {
+  display: flex;
+  left: 0;
+  animation: signslide 2s;
+}
+
+.form {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+  height: 100%;
+
+  background-color: rgb(243, 243, 243);
+  z-index: 100;
+}
+
+.form h1 {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 3;
+  margin: 0;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+}
+
+.form p {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 3;
+  margin: 0;
+  color: rgba(0, 0, 0, 0.5);
+  letter-spacing: 4px;
+}
+
+.form input {
+  width: 80%;
+  margin: 10px 0;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  background-color: rgb(243, 243, 243);
+  height: 40px;
+  min-width: 300px;
+  box-shadow: inset -3px -3px 3px white, inset 3px 3px 3px rgba(0, 0, 0, 0.3);
+  text-transform: capitalize;
+  padding: 0 15px;
+  transition: 0.5s;
+}
+
+.form input:focus {
+  background-color: rgba(213, 213, 213, 0.3);
+  box-shadow: -3px -3px 3px white, 3px 3px 3px rgba(0, 0, 0, 0.3);
+  transition: 0.5s;
+}
+
+.social {
+  width: 30%;
+  min-width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.icon {
+  width: 40px;
+  opacity: 0.5;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.icon:hover {
+  opacity: 1;
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+
+.inputs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#signform {
+  right: 0;
+  top: 0;
+  animation: signformslide 2s;
+}
+
+#registerform {
+  display: none;
+  left: 0;
+  top: 0;
+  animation: registerformslide 2s;
+}
+
+@keyframes register-circle1 {
+  0% {
+    left: 80%;
+  }
+  50%,
+  100% {
+    left: 60%;
+  }
+}
+
+@keyframes register-circle2 {
+  0% {
+    left: 10%;
+  }
+  50%,
+  100% {
+    left: 80%;
+  }
+}
+
+@keyframes sign-circle1 {
+  0% {
+    left: 60%;
+  }
+  50%,
+  100% {
+    left: 80%;
+  }
+}
+
+@keyframes sign-circle2 {
+  0% {
+    left: 80%;
+  }
+  50%,
+  100% {
+    left: 10%;
+  }
+}
+
+@keyframes registerslide {
+  0% {
+    right: 50%;
+  }
+  50%,
+  100% {
+    right: 0;
+  }
+}
+
+@keyframes signslide {
+  0% {
+    left: 50%;
+  }
+  50%,
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes signformslide {
+  0% {
+    right: 50%;
+  }
+  50%,
+  100% {
+    right: 0;
+  }
+}
+
+@keyframes registerformslide {
+  0% {
+    left: 50%;
+  }
+  50%,
+  100% {
+    left: 0;
+  }
+}
