@@ -1,0 +1,15 @@
+.MainWindow_main {
+  position: absolute;
+  background-color: var(--default-colour-4);
+  width: 95%;
+  height: 90%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+  z-index: 100;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

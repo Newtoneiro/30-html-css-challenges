@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
+
+:root {
+  --default-colour-1: rgb(153, 85, 168);
+  --default-colour-2: rgb(159, 119, 194);
+  --default-colour-3: rgb(62, 71, 172);
+  --default-colour-4: rgb(254, 252, 254);
+  --default-colour-5: rgb(244, 246, 255);
+  --default-colour-6: rgb(235, 238, 250);
+  --default-colour-7: rgb(199, 199, 199);
+  --default-colour-8: rgb(54, 141, 80);
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  font-family: "DM Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}

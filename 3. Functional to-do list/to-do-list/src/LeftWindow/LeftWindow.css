@@ -1,0 +1,122 @@
+.LeftWindow_main {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  overflow-y: auto;
+  padding: 60px 20px 10px;
+
+  flex-grow: 10;
+  max-height: 100%;
+}
+
+.LeftWindow_title {
+  font-weight: 400;
+  width: 100%;
+  text-align: left;
+}
+
+.LeftWindow_tabs {
+  margin: -2px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  border-bottom: 2px solid var(--default-colour-6);
+}
+
+.LeftWindow_tabs h1 {
+  flex-grow: 1;
+  margin: 0;
+  padding: 20px 10px;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  cursor: pointer;
+}
+
+h1.chosen {
+  color: var(--default-colour-8);
+  border-bottom: solid 2px var(--default-colour-8);
+}
+
+.LeftWindow_tasks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+.task-holder {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  cursor: pointer;
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 45px;
+}
+
+.task h2 {
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.5);
+  letter-spacing: 1px;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  width: 17px;
+  height: 17px;
+  border-radius: 4px;
+  border: solid 2px var(--default-colour-6);
+}
+
+.checked img {
+  width: 15px;
+  height: 15px;
+}
+
+.checked {
+  background-color: rgb(71, 190, 140);
+}
+
+h2.status {
+  border-radius: 15px;
+  font-size: 13px;
+}
+
+h2.s-0 {
+  padding: 5px 10px;
+  background-color: rgba(42, 245, 160, 0.4);
+  color: rgb(2, 123, 73);
+}
+
+h2.s-1 {
+  padding: 5px 10px;
+  background-color: rgba(238, 88, 88, 0.4);
+  color: rgb(184, 4, 4);
+}
+
+h2.s-2 {
+  padding: 5px 10px;
+  background-color: rgba(195, 56, 190, 0.4);
+  color: rgb(125, 2, 138);
+}
+
+h2.s-4 {
+  padding: 5px 10px;
+  background-color: rgba(177, 177, 177, 0.4);
+  color: rgb(82, 82, 82);
+}
