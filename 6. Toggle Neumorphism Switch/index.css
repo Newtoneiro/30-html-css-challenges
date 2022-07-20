@@ -1,0 +1,126 @@
+body {
+  background-color: rgb(231, 229, 231);
+  font-family: sans-serif;
+}
+
+.main {
+  overflow: hidden;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: whitesmoke;
+  border: solid 5px rgb(218, 218, 218);
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.2), 8px 8px 200px rgba(0, 0, 0, 0.2),
+    inset 0 0 20px rgba(0, 0, 0, 0.2);
+  background-color: rgb(66, 166, 41);
+}
+
+.main h1 {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.3);
+  color: white;
+}
+
+.main input {
+  opacity: 0;
+  width: 200px;
+  height: 200px;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.slider1 {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  height: 200px;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+  background-color: rgb(216, 216, 216);
+  color: rgb(75, 75, 75);
+  z-index: 4;
+  transition: 0.5s;
+  transition-delay: 1s;
+  box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.2);
+}
+
+.slider2 {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  height: 200px;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+  background-color: rgb(202, 202, 202);
+  color: rgb(75, 75, 75);
+  z-index: 3;
+  transition: 0.5s;
+  transition-delay: 0.5s;
+  box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.2);
+}
+
+.slider3,
+.slider4 {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  height: 200px;
+  transform: translate(-50%, 0%);
+  background-color: white;
+  color: rgb(75, 75, 75);
+  z-index: 2;
+  transition: 0.5s;
+  transition-delay: 0s;
+}
+
+.slider3 {
+  transform: translate(-50%, 0%);
+}
+
+.slider4 {
+  transform: translate(-50%, -100%);
+}
+
+.main input:checked ~ .slider1 {
+  transform: translate(-200%, -50%);
+  transition-delay: 0s;
+  transition: 0.5s;
+}
+
+.main input:checked ~ .slider2 {
+  transform: translate(200%, -50%);
+  transition-delay: 0.5s;
+}
+
+.main input:checked ~ .slider3 {
+  transform: translate(-50%, 200%);
+  transition-delay: 1s;
+}
+
+.main input:checked ~ .slider4 {
+  transform: translate(-50%, -200%);
+  transition-delay: 1s;
+}
