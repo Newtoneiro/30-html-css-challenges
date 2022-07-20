@@ -1,0 +1,109 @@
+body {
+  background-color: rgb(239, 240, 248);
+  font-family: "Poppins", sans-serif;
+}
+
+.main {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 60%;
+  height: 20%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: white;
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.2), 10px 10px 20px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  cursor: pointer;
+}
+
+.icon_desc {
+  opacity: 0;
+  top: 0;
+  position: absolute;
+  box-sizing: border-box;
+  border-radius: 10px;
+  padding: 15px;
+
+  font-size: 20px;
+  font-weight: 500;
+  color: white;
+  letter-spacing: 1px;
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.2), 10px 10px 20px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  z-index: 10;
+}
+
+.icon_icon {
+  color: black;
+  font-size: 40px;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.icon_desc::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%) rotate(45deg);
+  width: 13px;
+  height: 13px;
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.2), 10px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.icon:hover .icon_desc {
+  top: -45%;
+  opacity: 1;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.icon:hover .icon_icon {
+  color: white;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.icon:hover.fb,
+.fb .icon_desc,
+.fb .icon_desc::before {
+  background-color: rgb(57, 87, 154);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.icon:hover.tw,
+.tw .icon_desc,
+.tw .icon_desc::before {
+  background-color: rgb(66, 191, 246);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.icon:hover.ig,
+.ig .icon_desc,
+.ig .icon_desc::before {
+  background-color: rgb(224, 47, 108);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.icon:hover.gh,
+.gh .icon_desc,
+.gh .icon_desc::before {
+  background-color: rgb(51, 49, 50);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.icon:hover.yt,
+.yt .icon_desc,
+.yt .icon_desc::before {
+  background-color: rgb(220, 69, 59);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
