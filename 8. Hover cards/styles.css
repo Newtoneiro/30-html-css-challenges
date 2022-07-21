@@ -1,0 +1,53 @@
+body {
+  background-color: rgb(25, 25, 33);
+}
+
+.main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+}
+
+.card {
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  box-shadow: 2px 2px 20px black;
+  transition: 0.5s;
+}
+
+.card img {
+  object-fit: cover;
+  width: 100%;
+}
+
+.shine {
+  top: -90%;
+  right: -100%;
+  position: absolute;
+  width: 300px;
+  height: 600px;
+  transform: rotate(-30deg);
+  background: linear-gradient(90deg, transparent, white);
+  box-shadow: 0 0 200px white, inset 0 0 100px white;
+  transition: 0.5s;
+}
+
+.card:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+
+.card:hover .shine {
+  top: -60%;
+  right: -60%;
+  transition: 0.5s;
+}
