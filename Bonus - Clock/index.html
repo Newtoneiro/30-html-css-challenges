@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="index.css" />
+    <title>Clock</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="hour" id="hour"></div>
+      <div class="minute" id="minute"></div>
+      <div class="second" id="second"></div>
+    </div>
+  </body>
+  <script>
+    let minute = document.getElementById("minute");
+    let hour = document.getElementById("hour");
+    let second = document.getElementById("second");
+
+    const rotate = () => {
+      let now = new Date();
+      let hourdeg = (now.getHours() % 12) * (360 / 12);
+      let mindeg = now.getMinutes() * (360 / 60);
+      let secdeg = now.getSeconds() * (360 / 60);
+
+      hour.style.transform = `translatey(-50%) rotate(${hourdeg}deg)`;
+      minute.style.transform = `translatey(-50%) rotate(${mindeg}deg)`;
+      second.style.transform = `translatey(-50%) rotate(${secdeg}deg)`;
+    };
+
+    rotate();
+
+    setInterval(() => {
+      rotate();
+    }, 1000);
+  </script>
+</html>

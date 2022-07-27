@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="index.css" />
+    <title>Toggle switch</title>
+  </head>
+  <body>
+    <div class="container">
+      <input id="chbx" type="checkbox" />
+      <span class="toggle"></span>
+      <span class="circle"></span>
+    </div>
+  </body>
+  <script>
+    let checkbox = document.getElementById("chbx");
+    checkbox.addEventListener("click", () => {
+      let checkbox = document.getElementById("chbx");
+      let container = document.querySelector(".container");
+      if (checkbox.checked) {
+        container.classList.add("green");
+      } else {
+        container.classList.remove("green");
+      }
+    });
+  </script>
+</html>

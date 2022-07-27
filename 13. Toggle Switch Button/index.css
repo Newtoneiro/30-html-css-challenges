@@ -1,0 +1,85 @@
+body {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #aeaeae;
+  transition: 0.5s ease;
+}
+
+.green {
+  background: rgb(72, 225, 45);
+  transition: 0.5s ease;
+}
+
+input[type="checkbox"] {
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120px;
+  height: 120px;
+  z-index: 4;
+  cursor: pointer;
+}
+
+.toggle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 250px;
+  height: 120px;
+  border-radius: 60px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+
+  transition: 0.5s ease;
+}
+
+.circle {
+  position: absolute;
+  width: 220px;
+  height: 120px;
+  transition: 0.5s ease;
+}
+
+.circle::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+  background: #aeaeae;
+  border-radius: 50%;
+  transition: 0.5s ease;
+}
+
+input[type="checkbox"]:checked + .toggle {
+  transform: translate(-50%, -50%) rotate(180deg);
+  transition: 0.5s ease;
+}
+
+input[type="checkbox"]:checked ~ .circle {
+  transform: rotate(-180deg);
+  transition: 0.5s ease;
+}
+
+input[type="checkbox"]:checked ~ .circle::before {
+  background: rgb(72, 225, 45);
+  transition: 0.5s ease;
+}
